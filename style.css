@@ -42,15 +42,18 @@ body {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   display: grid;
-  grid-template-columns: 30px clamp(100px, 80%, 300px);
+  grid-template-rows: 50px;
+  grid-template-columns: 30px 200px;
+  align-items: center;
 }
-
 
 #query {
   appearance: none;
   border-radius: 10px;
   box-shadow: none;
   border: none;
+  width: 500px;
+  height: 2em;
   background-color: var(--search-background-color);
 }
 
@@ -58,14 +61,59 @@ body {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 50px;
+  grid-template-columns: 50px 70px 90px;
+  align-items: center;
+  justify-content: right;
+  padding: 0;
+  margin: 0;
 }
 
+.notification-icon {
+  grid-column: 1 / 2;
+}
 
+.profile-pic-small {
+  border-radius: 80%;
+  grid-column: 2 / 3;
+}
+
+.username-small {
+  font-size: 1em;
+  font-weight: 500;
+  grid-column: 3 / 4;
+}
 
 .welcome {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 30px 80px;
+  grid-template-columns: 125px 350px;
+}
+
+.profile-pic-large {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.hi-there {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  font-weight: 600;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.username-large {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  font-size: 1.75em;
+  font-weight: 400;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
 }
 
 .buttons {
